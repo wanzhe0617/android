@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".disizhangym"
+    android:background="@drawable/caozhibeijing">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="操控貪吃蛇"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="章節效果圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成度：3/6"
+            android:textSize="25dp"></TextView>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/caokongjt"></pl.droidsonroids.gif.GifImageView>
+
+
+        <TextView
+            android:id="@+id/biaoti5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="實現貪吃蛇的上下左右移動"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  我們需要控制貪吃蛇的上下左右的移動，這裡通過監聽鍵盤輸入來實現。利用鍵盤中的上下左右鍵或WASD鍵來控制貪吃蛇的運動。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n# 檢測按鍵等Pygame事件
+\n for event in pygame.event.get():
+\n    if event.type == QUIT:
+\n        # 接收到退出事件後，退出程式
+\n        pygame.quit()
+\n        sys.exit()
+\n\n    # 判斷鍵盤事件，用 方向鍵 或 wsad 來表示上下左右
+\n    elif event.type == KEYDOWN:
+\n        if (event.key == K_UP or event.key == K_w) and dir\n ection != DOWN:
+\n            direction = UP
+\n        if (event.key == K_DOWN or event.key == K_s) and d\n irection != UP:
+\n            direction = DOWN
+\n        if (event.key == K_LEFT or event.key == K_a) and d\n irection != RIGHT:
+\n            direction = LEFT
+\n        if (event.key == K_RIGHT or event.key == K_d) and \n direction != LEFT:
+\n            direction = RIGHT
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/neirong5-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  接下來就是將蛇前進方向按照鍵盤的輸入進行轉彎操作，並將蛇的頭部當前的位置加入到蛇身的列表中。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm5-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 根據鍵盤的輸入，改變蛇的頭部，進行轉彎操作
+\nif direction == LEFT:
+\n    snake_Head[0] -= 20
+\nif direction == RIGHT:
+\n    snake_Head[0] += 20
+\nif direction == UP:
+\n    snake_Head[1] -= 20
+\nif direction == DOWN:
+\n    snake_Head[1] += 20
+\n\n# 將蛇的頭部當前的位置加入到蛇身的列表中
+\nsnake_Body.insert(0, list(snake_Head))"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="示意圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/caokong"></ImageView>
+
+        <Button
+            android:id="@+id/csm"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#32000000"
+            android:text="點擊\n取得程式碼"></Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:textColor="#FFEB3B"></TextView>
+
+            <TextView
+                android:id="@+id/diyihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：用法"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dierhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  有時候我們必須根據資料的條件，執行不同的程式碼。例如當成績不及格時，把學生加入不及格的名單中。遇到這種情況，就必須使用If判斷式。If判斷式的功能是設定一個條件，來決定某一段程式碼是否要執行，而這個條件就是前面介紹的關係運算式。"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/disanhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：主要介紹"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/disihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  If判斷式是由if區塊、elif區塊和else區塊組成，而且必須符合下列條件：
+     \n1.一定要有一個if區塊，而且只有一個。(用於第一個“如果”)
+     \n2.elif區塊可以沒有，也可以有一個或多個。（用於需要多個“如果”從第二個“如果”開始運用）
+     \n3.else區塊可以沒有，也可以有一個，不可以多個。（只能用於最後，白話：否則就...）"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/diwuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：簡易原理圖"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/ifgif"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:src="@drawable/ifgif"></pl.droidsonroids.gif.GifImageView>
+
+
+            <TextView
+                android:id="@+id/diliuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：範例（一）"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/diqihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  題目：統計考試成績及格和不及格的人數，請參考以下程式碼。如果score中的數值大於或等於60，count_pass就會加1，表示多了一位及格的學生，否則count_fail就會加1，表示多了一位不及格的學生。"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dibahang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="# score是儲存成績的數值物件
+        \n # count_pass用來累加及格人數
+        \n # count_fail用來累加不及格人數
+        \n\n count_pass = count_fail = 0
+        \n if score >= 60:
+        \n   count_pass += 1
+        \n else:
+        \n   count_fail += 1"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/diba1hang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  注意!!屬於if的程式區塊要「以4個空格向右縮排」 ，表示它們是屬於上一行(if…)的區塊，而其他非區塊內的敘述則「不可縮排」 ，否則會被誤認為是區塊內的敘述。"
+                android:textSize="20dp"
+                android:textColor="#D30101"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dijiuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：範例（二）"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="接下來是一個比較複雜的例子。假設我們要將學生成績分級，規則如下：
+        \n\n 90分以上是「A+」，
+        \n 80~89分是「A」，
+        \n 70~79分是「B」，
+        \n 60~69分是「C」，
+        \n 小於60分為「F」(不及格)。
+        \n 程式如下:"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishiyihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#score = 79 #用score這個變數來儲存學生的學期成績
+    \n\n if score>=90: print(“等第為A+，太厲害了”)
+    \n elif score>=80: print(“等第為A，很優秀哦”) #第二個“if”所以用“elif”
+    \n elif score>=70: print(“等第為B，還不錯哦”)
+    \n elif score>=60: print(“等第為C，馬馬虎虎啦”)
+    \n else: print(“等第為F，再接再厲”) #因爲是最後一個所以用“else”"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：貪吃蛇範例"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="貪吃蛇中判定是否吃到食物就是用if判斷式
+        \n程式碼如下"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if snake_Head[0]==food_Position[0] and snake_Head[1]==food_Position[1]:
+        \n     food_flag = 0
+        \nelse:
+        \n     snake_Body.pop()"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/dishierhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：題目練習-選擇題"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/xzttm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 請問if判斷式的哪個部分要縮排？"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <RadioGroup
+                android:id="@+id/xz1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/xz1t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(A) 第一行"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B) 全部都要"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C) 程式區塊"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D) 以上皆非"
+                    android:textSize="25dp"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xzttm1daan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="35dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/xzttm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. 請問Python的if判斷式中，“否則就”的語法是什麼？"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <RadioGroup
+                android:id="@+id/xz2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/xz2t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(A) else if"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B) elseif"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C) elif"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D) else"
+                    android:textSize="25dp"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xzttm2daan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="35dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishisanhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if判斷式：題目練習-實作題"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishisihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 延續“範例（二）”老師想要為沒有發揮好的同學一次補考的機會，55~60的可以補考
+        \n請問應該怎麽修改“範例（二）”的程式碼"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <Button
+                android:id="@+id/qudedaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#32000000"
+                android:text="點擊取得答案"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"></Button>
+
+            <TextView
+                android:id="@+id/shizuodaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#5C5B5B"></TextView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

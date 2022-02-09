@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diqizhangym"
+    android:background="@drawable/caozhibeijing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="定義相關函式"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成度：6/6"
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="繪製貪吃蛇、食物、分數等資訊"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  定義貪吃蛇的繪製函式"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 繪製貪吃蛇
+\ndef drawSnake(snake_Body):
+\n    for i in snake_Body:
+\n        pygame.draw.rect(DISPLAY, WHITE, Rect(i[0], i[1], 20, 20))"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  定義食物的繪製函式"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 繪製食物的位置
+\ndef drawFood(food_Position):
+\n    pygame.draw.rect(DISPLAY, RED, Rect(food_Position[0], food_Position[1], 20, 20))"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  定義分數的繪製函式"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="def drawScore(score):
+\n    # 設定分數的顯示顏色
+\n    score_Surf = BASICFONT.render('%s' %(score), True, GREY)
+\n    # 設定分數的位置
+\n    score_Rect = score_Surf.get_rect()
+\n    score_Rect.midtop = (320, 240)
+\n    # 繫結以上設定到控制程式碼
+\n    DISPLAY.blit(score_Surf, score_Rect)
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/neirong8-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  這些都定義好之後，我們需要在遊戲主邏輯中呼叫它們，並重新整理Pygame的顯示層，貪吃蛇與食物的每一次移動，都會進行重新整理顯示層的操作來顯示。最後我們可以設定一個速度值來合理控制遊戲執行的速度。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm8-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DISPLAY.fill(BLACK)
+\n# 畫出貪吃蛇
+\ndrawSnake(snake_Body)
+\n# 畫出食物的位置
+\ndrawFood(food_Position)
+\n# 列印出玩家的分數
+\ndrawScore(len(snake_Body) - 3)
+\n# 重新整理Pygame的顯示層，貪吃蛇與食物的每一次移動，都會進行重新\n整理顯示層的操作來顯示。
+\npygame.display.flip()
+\n# 控制遊戲速度
+\nFPSCLOCK.tick(7)
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="定義遊戲結束的畫面並判斷遊戲是否結束"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  定義函式，用於展示遊戲結束的畫面並退出程式"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 遊戲結束並退出
+\ndef GameOver():
+\n    # 設定GameOver的顯示顏色
+\n    GameOver_Surf = BASICFONT.render('Game Over!', True, GREY)
+\n    # 設定GameOver的位置
+\n    GameOver_Rect = GameOver_Surf.get_rect()
+\n    GameOver_Rect.midtop = (320, 10)
+\n    # 繫結以上設定到控制程式碼
+\n    DISPLAY.blit(GameOver_Surf, GameOver_Rect)
+\n\n    pygame.display.flip()
+\n    # 等待3秒
+\n    time.sleep(3)
+\n    # 退出遊戲
+\n    pygame.quit()
+\n    # 退出程式
+\n    sys.exit()
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/neirong9-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  在遊戲主邏輯中加入判斷，遊戲是否結束"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm9-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="'''遊戲結束的判斷'''
+\n# 貪吃蛇觸碰到邊界
+\nif snake_Head[0]> 0 or snake_Head[0]>620:
+\n    GameOver()
+\nif snake_Head[1]> 0 or snake_Head[1]>460:
+\n    GameOver()
+\n# 貪吃蛇觸碰到自己
+\nfor i in snake_Body[1:]:
+\n    if snake_Head[0]==i[0] and snake_Head[1]==i[1]:
+\n        GameOver()
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:textColor="#FFEB3B"
+                android:layout_marginTop="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/diyihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：用法"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dierhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  function 是一個建構程式時的小區塊，它就像是一台機器，你可以自行指定它的功能，以及所需要的原料（輸入）、產出（輸出）。
+舉例來說，自動販賣機就像是一個 function ，他的 input 是硬幣和商品的選擇， output 則是你所選的商品。
+既然它是一個機器，就代表在製作出這個 function 的時候，關於這個機器的規格（也就是輸入、輸出和功能）都要被規定好，要使用的時候，也只能依照著這個規定來使用它。
+如此一來，在需要用到同一個操作的時候，只需要呼叫這個函式，就可以免去把同樣的程式碼不斷複製貼上的情況。"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/disanhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：主要介紹"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/disihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  函式Function主要由2大區塊組成：定義函式、呼叫函式
+            \n\n定義函式的基本架構，十分簡單，包含兩個區塊：
+            \n1.宣告：我們會利用 def 這個關鍵字來定義我們的 function ，包含函式名稱以及這個函式所需的參數。
+            \n2.程式碼內容：我們需要這個函式做什麼，就在這裡寫什麼程式碼。"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/disihang1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="def 函式名稱(參數):
+            \n程式碼"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:background="#5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/diwuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：簡易原理圖"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <ImageView
+                android:id="@+id/Function"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:src="@drawable/function"></ImageView>
+
+            <TextView
+                android:id="@+id/diliuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：範例（一）"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/diqihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  基本範例"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dibahang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="def sayHallo()#函式名稱
+            \n    print(“Hallo”)#函式程式碼
+            \n\n sayHallo()#呼叫函式"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/dijiuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：範例（二）"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  分辨平閏年的方法為：
+            \n1. 公元年分除以4不可整除，為平年。
+            \n2. 公元年分除以4可整除但除以100不可整除，為閏年。
+            \n3. 公元年分除以100可整除但除以400不可整除，為平年。"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishiyihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="def check_leap_year(year):
+            \nif (year % 400 == 0) or (year % 100 != 0 and year % 4 == 0):
+            \n    print(“閏年”)
+            \nelse:
+            \n    print(“平年”)"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：貪吃蛇範例"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="貪吃蛇中畫出貪吃蛇
+            \n程式碼如下"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="def drawSnake(snake_Body):
+            \n    for i in snake_Body:
+            \n        pygame.draw.rect(DISPLAY, WHITE, Rect(i[0], i[1], 20, 20))"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/dishierhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：題目練習-選擇題"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/xzttm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 請問以下關於函式的敘述何者錯誤？"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <RadioGroup
+                android:id="@+id/xz1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/xz1t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(A) 函式名會被新定義的同名變數取代"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B) 定義函式時一定要有參數"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C) 定義函式時還不會執行函式內的程式區塊"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D) 呼叫沒定義的函式會出現NameError的錯誤"
+                    android:textSize="25dp"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xzttm1daan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="35dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/xzttm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. 請問函式Function由哪兩大區塊組成？"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <RadioGroup
+                android:id="@+id/xz2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/xz2t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(A) 宣告、程式碼内容"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B) else 、if"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C) for、print"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D) 定義函式、呼叫函式"
+                    android:textSize="25dp"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xzttm2daan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="35dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishisanhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="函式Function：題目練習-實作題"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishisihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 熱量計算機
+            \n \n 烘焙坊的麵包或餅乾要標示出熱量才能正常販售，在營養學上，1公克的蛋白質和醣類可以提供4大卡的熱量，脂肪則為9大卡，請幫他們寫一個函式，只要傳入蛋白質、醣類和脂肪的公克數，就會傳出總熱量的大卡數："
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <Button
+                android:id="@+id/qudedaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#32000000"
+                android:text="點擊取得答案"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"></Button>
+
+            <TextView
+                android:id="@+id/shizuodaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

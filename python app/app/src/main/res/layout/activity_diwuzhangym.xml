@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diwuzhangym"
+    android:background="@drawable/caozhibeijing">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/zhubiaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="食物判定與生成"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="章節效果圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成度：4/6"
+            android:textSize="25dp"></TextView>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shiwujt"></pl.droidsonroids.gif.GifImageView>
+
+
+        <TextView
+            android:id="@+id/biaoti2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="判定是否吃到食物"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  如果蛇頭與食物的位置重合，則判定吃到食物，將食物數量清零；而沒吃到食物的話，蛇身就會跟著蛇頭運動，蛇身的最後一節將被踢出列表。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 判斷是否吃掉食物
+\nif snake_Head[0]==food_Position[0] and snake_Head[1]==f\nood_Position[1]:
+\n    food_flag = 0
+\nelse:
+\n    snake_Body.pop()"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="重新生成食物"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  當遊戲介面中的食物數量為0時，需要重新生成食物。利用random函式來生成隨機位置"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 生成新的食物
+\nif food_flag == 0:
+\n    # 隨機生成x, y
+\n    x = random.randrange(1,32)
+\n    y = random.randrange(1,24)
+\n    food_Position = [int(x*20),int(y*20)]
+\n    food_flag = 1
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="示意圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="判定是否吃到食物"
+            android:textSize="20dp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:src="@drawable/pandingshiwu"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="新生成食物"
+            android:textSize="20dp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:src="@drawable/xinshiwu"></ImageView>
+
+        <Button
+            android:id="@+id/csm"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#32000000"
+            android:text="點擊\n取得程式碼"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

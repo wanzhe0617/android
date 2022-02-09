@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".disanzhangym"
+    android:background="@drawable/caozhibeijing">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="遊戲初始化"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="章節效果圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成度：2/6"
+            android:textSize="25dp"></TextView>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/chushihuajt"></pl.droidsonroids.gif.GifImageView>
+
+        <TextView
+            android:id="@+id/biaoti4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="初始化貪吃蛇及食物"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  遊戲中需要有貪吃蛇及食物，我們給定一個初始值。我們將整個介面看成許多20*20的小方塊，每個小方塊代表一個標準小格子，貪吃蛇的長度就可以用幾個標準小格子表示。我們將貪吃蛇身體用列表的形式儲存，方便之後的刪減。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n# 貪吃蛇的的初始位置
+\n snake_Head = [100,100]
+\n # 初始化貪吃蛇的長度 (注：這裡以20*20為一個標準小格子)
+\n snake_Body = [[80,100],[60,100],[40,100]]
+\n # 指定蛇初始前進的方向，向右
+\n direction = 'right'
+\n \n # 給定第一枚食物的位置
+\n food_Position = [300,300]
+\n # 食物標記：0代表食物已被吃掉；1代表未被吃掉。
+\n food_flag = 1
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="示意圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/chushihua"></ImageView>
+
+        <Button
+            android:id="@+id/csm"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#32000000"
+            android:text="點擊\n取得程式碼"></Button>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:textColor="#FFEB3B"
+                android:layout_marginTop="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/diyihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：用法"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dierhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="  在處理資料的時候，時常會需要重複執行某些相同的步驟；而迴圈 (loop) 的作用是讓指定的某段敘述在條件符合的情況下一直重覆執行，是程式設計中很重要的一種控制結構。我們可以利用迴圈來進行重覆性的資料輸入、處理與輸出。"
+                android:textSize="25dp"></TextView>
+
+            <TextView
+                android:id="@+id/disanhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：主要介紹"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/disihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="  “for” 和 “in” 是 for迴圈 的關鍵字，這兩個關鍵字之間會放我們自訂的變數，而 in的後面則可接一個序列 (Sequence)，迴圈會依序從序列 (例如: 一連串清單資料，一組數字或一個名單) 裡取得元素，並將元素指派給前面自訂的變數，然後執行迴圈裡的內容"
+                android:textSize="25dp"></TextView>
+
+            <TextView
+                android:id="@+id/diwuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：簡易原理圖"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/ifgif"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:src="@drawable/forgif"></pl.droidsonroids.gif.GifImageView>
+
+            <TextView
+                android:id="@+id/diliuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：範例（一）"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/diqihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  題目：假裝你是一位老師，上課前要點名。
+        \n 一共有詠晴, 品妍, 宥蓁, 柏睿, 宥廷, 柏宇6位同學"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dibahang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="classroom = ['詠晴', '品妍', '宥蓁', '柏睿', '宥廷', '柏宇'] #classroom這個列表裡有這些同學
+        \n for i in classroom: #逐一取得classroom列表中的資料至i
+        \n  print(i)#列出i"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/diba1hang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  數值型態：int, float, bool
+        \n字串型態：str, chr
+        \n容器型態：list, dict, tuple"
+                android:textSize="20dp"
+                android:textColor="#FA0000"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dijiuhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：範例（二）"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  列出0-100的數字"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishiyihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for i in range(101):#逐一取得101以内的資料至i
+        \n  print(i) #如果我把i改成Hi，就變成了100次的Hi"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/dishi1hang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  列出50-100的數字（包含50和100）"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishiyi1hang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for i in range(50-101):#逐一取得50（包含）-101以内的資料至i
+        \n  print(i)"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：貪吃蛇範例"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="貪吃蛇中检测按键等Pygame事件
+        \n程式碼如下"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/tcsfli3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for event in pygame.event.get():
+        \n    if event.type == QUIT:"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#BF5C5B5B"></TextView>
+
+            <TextView
+                android:id="@+id/dishierhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="for迴圈：題目練習-選擇題"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/xzttm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 請問以下關於for迴圈的敘述何者錯誤？"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <RadioGroup
+                android:id="@+id/xz1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/xz1t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(A) for迴圈可將容器中的元素一一讀取出來"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B) 凡是可走訪的容器都可用for來走訪"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C) 集合(set)是無序容器，所以無法用for來走訪"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz1t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D) range()傳回的資料也是一種容器"
+                    android:textSize="25dp"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xzttm1daan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="35dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/xzttm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. 請問以下程式碼會顯示幾次“EGG”？
+        \n for i in range(1,10):
+        \n    print(“EGG”)"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <RadioGroup
+                android:id="@+id/xz2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/xz2t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(A) 10"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B) 9"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C) 8"
+                    android:textSize="25dp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/xz2t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D) 7"
+                    android:textSize="25dp"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xzttm2daan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="35dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishisanhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" for迴圈：題目練習-實作題"
+                android:textSize="30dp"
+                android:textColor="#000079"
+                android:layout_marginTop="10dp"></TextView>
+
+            <TextView
+                android:id="@+id/dishisihang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 列出九九乘法表"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"></TextView>
+
+            <Button
+                android:id="@+id/qudedaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#32000000"
+                android:text="點擊取得答案"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"></Button>
+
+            <TextView
+                android:id="@+id/shizuodaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#4CAF50"
+                android:background="#5C5B5B"></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pythonapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="貪吃蛇教學\npython"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".jieshao"
+            android:label="結構"></activity>
+        <activity
+            android:name=".qibazhangym"
+            android:label="總結" />
+        <activity
+            android:name=".diqizhangym"
+            android:label="相關函式" />
+        <activity
+            android:name=".diliuzhangym"
+            android:label="判定遊戲結束" />
+        <activity
+            android:name=".diwuzhangym"
+            android:label="判定是否吃到食物" />
+        <activity
+            android:name=".disizhangym"
+            android:label="操控貪吃蛇" />
+        <activity
+            android:name=".disanzhangym"
+            android:label="設定遊戲初始化" />
+        <activity
+            android:name=".dierzhangym"
+            android:label="建立遊戲視窗" />
+        <activity
+            android:name=".diyizhangym"
+            android:label="安裝" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

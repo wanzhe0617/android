@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".jieshao"
+    android:background="@drawable/caozhibeijing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="遊戲架構"
+            android:textSize="30dp"
+            android:textColor="#FFEB3B"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:src="@drawable/jiagou"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="教學架構"
+            android:textSize="30dp"
+            android:textColor="#FFEB3B"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我們是使用建構式的方式進行教學，分成5個單元："
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.建立遊戲視窗\n2.設定遊戲初始化\n3.操控貪吃蛇\n4.判定是否吃到食物、生產食物\n5.判定遊戲結束"
+            android:textColor="#304FFE"
+            android:textSize="25dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

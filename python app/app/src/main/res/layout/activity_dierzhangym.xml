@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dierzhangym"
+    android:background="@drawable/caozhibeijing">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="建立遊戲環境"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="章節效果圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成度：1/6"
+            android:textSize="25dp"></TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shichuangjt"></ImageView>
+
+        <TextView
+            android:id="@+id/biaoti1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="需求分析"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  首先呢，需要有貪吃蛇、有食物；需要能控制貪吃蛇來上下移動獲取食物；貪吃蛇在吃取食物後，自身長度增加，同時食物消失並隨機生成新的食物；如果貪吃蛇觸碰到四周牆壁或是觸碰到自己身體時，則遊戲結束。
+遊戲規則就是這麼簡單"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/biaoti2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="程式碼實現"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  首先匯入我們要用到的模組，除了第三方庫pygame外，我們還會用到一些Python內建的模組如sys、random、time等，一併匯入即可。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="import pygame, sys, random, time
+        \n# 從pygame模組匯入常用的函式和常量
+        \nfrom pygame.locals import *"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一些全域性引數的初始化"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  接下來，我們需要宣告一些全域性引數。如初始化pygame、定義遊戲視窗的大小、視窗的標題、定義全域性的顏色變數等資訊。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 初始化Pygame庫
+\npygame.init()
+\n# 初始化一個遊戲介面視窗
+\nDISPLAY = pygame.display.set_mode((640, 480))
+\n# 設定遊戲視窗的標題
+\npygame.display.set_caption('人人都是Pythonista - Snake')
+\n# 定義一個變數來控制遊戲速度
+\nFPSCLOCK = pygame.time.Clock()
+\n# 初始化遊戲介面內使用的字型
+\nBASICFONT = pygame.font.SysFont('SIMYOU.TTF', 80)
+\n\n# 定義顏色變數
+\nBLACK = pygame.Color(0, 0, 0)
+\nWHITE = pygame.Color(255, 255, 255)
+\nRED = pygame.Color(255, 0, 0)
+\nGREY = pygame.Color(150, 150, 150)"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="示意圖"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/youxihuanjing"></ImageView>
+
+        <Button
+            android:id="@+id/csm"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#32000000"
+            android:text="點擊\n取得程式碼"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</ScrollView>

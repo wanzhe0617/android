@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".qibazhangym"
+    android:background="@drawable/caozhibeijing">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/zhubiaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="製作貪吃蛇"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="程式碼實現"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  首先匯入我們要用到的模組，除了第三方庫pygame外，我們還會用到一些Python內建的模組如sys、random、time等，一併匯入即可。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="import pygame, sys, random, time
+        \n# 從pygame模組匯入常用的函式和常量
+        \nfrom pygame.locals import *"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一些全域性引數的初始化"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  接下來，我們需要宣告一些全域性引數。如初始化pygame、定義遊戲視窗的大小、視窗的標題、定義全域性的顏色變數等資訊。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 初始化Pygame庫
+\npygame.init()
+\n# 初始化一個遊戲介面視窗
+\nDISPLAY = pygame.display.set_mode((640, 480))
+\n# 設定遊戲視窗的標題
+\npygame.display.set_caption('人人都是Pythonista - Snake')
+\n# 定義一個變數來控制遊戲速度
+\nFPSCLOCK = pygame.time.Clock()
+\n# 初始化遊戲介面內使用的字型
+\nBASICFONT = pygame.font.SysFont('SIMYOU.TTF', 80)
+\n\n# 定義顏色變數
+\nBLACK = pygame.Color(0, 0, 0)
+\nWHITE = pygame.Color(255, 255, 255)
+\nRED = pygame.Color(255, 0, 0)
+\nGREY = pygame.Color(150, 150, 150)"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="初始化貪吃蛇及食物"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  遊戲中需要有貪吃蛇及食物，我們給定一個初始值。我們將整個介面看成許多20*20的小方塊，每個小方塊代表一個標準小格子，貪吃蛇的長度就可以用幾個標準小格子表示。我們將貪吃蛇身體用列表的形式儲存，方便之後的刪減。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n# 貪吃蛇的的初始位置
+\n snake_Head = [100,100]
+\n # 初始化貪吃蛇的長度 (注：這裡以20*20為一個標準小格子)
+\n snake_Body = [[80,100],[60,100],[40,100]]
+\n # 指定蛇初始前進的方向，向右
+\n direction = 'right'
+\n \n # 給定第一枚食物的位置
+\n food_Position = [300,300]
+\n # 食物標記：0代表食物已被吃掉；1代表未被吃掉。
+\n food_flag = 1
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="實現貪吃蛇的上下左右移動"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  我們需要控制貪吃蛇的上下左右的移動，這裡通過監聽鍵盤輸入來實現。利用鍵盤中的上下左右鍵或WASD鍵來控制貪吃蛇的運動。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n# 檢測按鍵等Pygame事件
+\n for event in pygame.event.get():
+\n    if event.type == QUIT:
+\n        # 接收到退出事件後，退出程式
+\n        pygame.quit()
+\n        sys.exit()
+\n\n    # 判斷鍵盤事件，用 方向鍵 或 wsad 來表示上下左右
+\n    elif event.type == KEYDOWN:
+\n        if (event.key == K_UP or event.key == K_w) and dir\n ection != DOWN:
+\n            direction = UP
+\n        if (event.key == K_DOWN or event.key == K_s) and d\n irection != UP:
+\n            direction = DOWN
+\n        if (event.key == K_LEFT or event.key == K_a) and d\n irection != RIGHT:
+\n            direction = LEFT
+\n        if (event.key == K_RIGHT or event.key == K_d) and \n direction != LEFT:
+\n            direction = RIGHT
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/neirong5-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  接下來就是將蛇前進方向按照鍵盤的輸入進行轉彎操作，並將蛇的頭部當前的位置加入到蛇身的列表中。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm5-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 根據鍵盤的輸入，改變蛇的頭部，進行轉彎操作
+\nif direction == LEFT:
+\n    snake_Head[0] -= 20
+\nif direction == RIGHT:
+\n    snake_Head[0] += 20
+\nif direction == UP:
+\n    snake_Head[1] -= 20
+\nif direction == DOWN:
+\n    snake_Head[1] += 20
+\n\n# 將蛇的頭部當前的位置加入到蛇身的列表中
+\nsnake_Body.insert(0, list(snake_Head))"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="判斷是否吃到食物"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  如果蛇頭與食物的位置重合，則判定吃到食物，將食物數量清零；而沒吃到食物的話，蛇身就會跟著蛇頭運動，蛇身的最後一節將被踢出列表。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 判斷是否吃掉食物
+\nif snake_Head[0]==food_Position[0] and snake_Head[1]==f\nood_Position[1]:
+\n    food_flag = 0
+\nelse:
+\n    snake_Body.pop()"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="重新生成食物"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  當遊戲介面中的食物數量為0時，需要重新生成食物。利用random函式來生成隨機位置"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 生成新的食物
+\nif food_flag == 0:
+\n    # 隨機生成x, y
+\n    x = random.randrange(1,32)
+\n    y = random.randrange(1,24)
+\n    food_Position = [int(x*20),int(y*20)]
+\n    food_flag = 1
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="繪製貪吃蛇、食物、分數等資訊"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  定義貪吃蛇的繪製函式"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 繪製貪吃蛇
+\ndef drawSnake(snake_Body):
+\n    for i in snake_Body:
+\n        pygame.draw.rect(DISPLAY, WHITE, Rect(i[0], i[1], 20, 20))
+\n定義食物的繪製函式
+\n# 繪製食物的位置
+\ndef drawFood(food_Position):
+\n    pygame.draw.rect(DISPLAY, RED, Rect(food_Position[0], food_Position[1], 20, 20))
+\n\n定義分數的繪製函式
+\n# 列印出當前得分
+\ndef drawScore(score):
+\n    # 設定分數的顯示顏色
+\n    score_Surf = BASICFONT.render('%s' %(score), True, GREY)
+\n    # 設定分數的位置
+\n    score_Rect = score_Surf.get_rect()
+\n    score_Rect.midtop = (320, 240)
+\n    # 繫結以上設定到控制程式碼
+\n    DISPLAY.blit(score_Surf, score_Rect)
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/neirong8-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  這些都定義好之後，我們需要在遊戲主邏輯中呼叫它們，並重新整理Pygame的顯示層，貪吃蛇與食物的每一次移動，都會進行重新整理顯示層的操作來顯示。最後我們可以設定一個速度值來合理控制遊戲執行的速度。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm8-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DISPLAY.fill(BLACK)
+\n# 畫出貪吃蛇
+\ndrawSnake(snake_Body)
+\n# 畫出食物的位置
+\ndrawFood(food_Position)
+\n# 列印出玩家的分數
+\ndrawScore(len(snake_Body) - 3)
+\n# 重新整理Pygame的顯示層，貪吃蛇與食物的每一次移動，都會進行重新\n整理顯示層的操作來顯示。
+\npygame.display.flip()
+\n# 控制遊戲速度
+\nFPSCLOCK.tick(7)
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/biaoti9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="定義遊戲結束的畫面並判斷遊戲是否結束"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/neirong9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  定義函式，用於展示遊戲結束的畫面並退出程式"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="# 遊戲結束並退出
+\ndef GameOver():
+\n    # 設定GameOver的顯示顏色
+\n    GameOver_Surf = BASICFONT.render('Game Over!', True, GREY)
+\n    # 設定GameOver的位置
+\n    GameOver_Rect = GameOver_Surf.get_rect()
+\n    GameOver_Rect.midtop = (320, 10)
+\n    # 繫結以上設定到控制程式碼
+\n    DISPLAY.blit(GameOver_Surf, GameOver_Rect)
+\n\n    pygame.display.flip()
+\n    # 等待3秒
+\n    time.sleep(3)
+\n    # 退出遊戲
+\n    pygame.quit()
+\n    # 退出程式
+\n    sys.exit()
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/neirong9-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  在遊戲主邏輯中加入判斷，遊戲是否結束"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/csm9-1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="'''遊戲結束的判斷'''
+\n# 貪吃蛇觸碰到邊界
+\nif snake_Head[0]> 0 or snake_Head[0]>620:
+\n    GameOver()
+\nif snake_Head[1]> 0 or snake_Head[1]>460:
+\n    GameOver()
+\n# 貪吃蛇觸碰到自己
+\nfor i in snake_Body[1:]:
+\n    if snake_Head[0]==i[0] and snake_Head[1]==i[1]:
+\n        GameOver()
+"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="#80FFFFFF"></TextView>
+
+        <TextView
+            android:id="@+id/dishiyihang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="貪吃蛇完整程式碼"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <Button
+            android:id="@+id/csm"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#32000000"
+            android:text="點擊\n取得程式碼"></Button>
+
+        <TextView
+            android:id="@+id/dishierhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="延伸題目"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  1.更改遊戲窗口標題為“python貪吃蛇”
+            \n請於以下程式碼更改"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" pygame.init()
+            \n pygame.display.set_caption('Python - Snake')
+            \n FPSCLOCK = pygame.time.Clock()
+            \n BASICFONT = pygame.font.SysFont('SIMYOU.TTF', 80)"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#4CAF50"
+            android:background="#BF5C5B5B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  2.更改第一枚食物位置[250,350]
+            \n請於以下程式碼更改"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" snake_Head = [100,100]
+            \n snake_Body = [[80,100],[60,100],[40,100]]
+            \n direction = 'right'
+            \n\n food_Position = [300,300]
+            \n food_flag = 1"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#4CAF50"
+            android:background="#BF5C5B5B"></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/shangzhang"
+                android:text="上一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

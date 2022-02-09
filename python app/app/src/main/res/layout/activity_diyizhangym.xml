@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diyizhangym"
+    android:background="@drawable/caozhibeijing">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="如何安裝及應用Python"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textColor="#FFEB3B"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mac OS安裝"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  在Mac OS電腦上，若你的系統版本為OS X 10.8- 10.12，是預載了Python 2.7的。所以，簡單的來說，是不需要另外安裝就可以使用Python。
+當然，若你希望安裝最新的Python，可按步驟如下：
+\n1.Google搜索“python”進入Python官網的下載頁面"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/google"></ImageView>
+
+        <ImageView
+            android:id="@+id/downloads"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/downloads"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.查找一個穩定版本(有rc1的為測試版)"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/yemian"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/yemian"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.運行.pkg執行檔，來完成安裝"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/anzhaung"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/anzhuang"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4.現在我們可以檢查Python是否安裝成功了。
+先按command + space，然後打Terminal.app來打開終端機。然後輸入python3 --version，可以得到你係統的已安裝的Python版本。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Windows安裝"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.Google搜索“python”進入Python官網的下載頁面"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/google2"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/google"></ImageView>
+
+        <ImageView
+            android:id="@+id/downloads1"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/downloads1"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.查找一個穩定版本(有rc1的為測試版)
+            \n 如你的Windows是32位元，請下載Windows x86的版本，如果是64位元，請下載Windows x86–64的版本。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/yemian1"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/yemian1"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.直接運行已下載的.exe執行檔，並按以下程序執行。"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/dishihang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="python開發軟體"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/dishiyihang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  推薦Visual Studio Code
+\n Visual Studio Code 是一個運行於 OS X，Windows 和 Linux 之上的，針對於編寫現代 web 和雲應用的跨平臺編輯器。
+\n\n  1.Google搜索“Visual Studio Code”進入Visual Studio Code官網的下載頁面"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/google3"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/google2"></ImageView>
+
+        <TextView
+            android:id="@+id/dishierhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.下載並安裝"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/downloads2"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/downloads2"></ImageView>
+
+        <TextView
+            android:id="@+id/dishisanhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.界面如下"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/jiemian"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/jiemian"></ImageView>
+
+        <TextView
+            android:id="@+id/diyihang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="安裝pygame"
+            android:textSize="30dp"
+            android:textColor="#000079"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/dierhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Google搜索“pygame”點擊進入“Pygame 安裝 - Python遊戲教學”"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/pygame1"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/pygame1"></ImageView>
+
+        <TextView
+            android:id="@+id/disanhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Google搜索“pygame”點擊進入“Pygame 安裝 - Python遊戲教學”"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/disihang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  點擊 http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/pygame2"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pygame2"></ImageView>
+
+        <TextView
+            android:id="@+id/diwuhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  找尋對應的版本
+            \n例如：我的python版本是3.7 電腦位元是64
+            \n那我就選pygame‑1.9.6‑cp37‑cp37‑win_amd64.whl"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/pygame3"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:src="@drawable/pygame3"></ImageView>
+
+        <TextView
+            android:id="@+id/diliuhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  下載完後“以系統管理員身份打開命令提示字元”
+            \n並將路徑更改到剛剛下載的pygame的路徑"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/pygame4"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pygame4"></ImageView>
+
+        <TextView
+            android:id="@+id/diqihang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  打“cd”加上路徑會直接跳過去"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/pygame5"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:src="@drawable/pygame5"></ImageView>
+
+        <TextView
+            android:id="@+id/dibahang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  使用下列指令安裝pygame
+            \npip install pygame-1.9.6-cp37-cp37m-win_amd64.whl"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <ImageView
+            android:id="@+id/pygame6"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:src="@drawable/pygame6"></ImageView>
+
+        <TextView
+            android:id="@+id/dijiuhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  安裝完成"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/zhuye"
+                android:text="主頁"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+
+
+            <Button
+                android:id="@+id/xiazhang"
+                android:text="下一章"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/caozhibeijing">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="前言"
+            android:textSize="40dp"
+            android:textColor="#FC5608"
+            android:gravity="center"></TextView>
+
+            <Button
+                android:id="@+id/diyizhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="安裝python\n安裝pygame"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"/>
+
+        <Button
+            android:id="@+id/jieshao"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/anjian"
+            android:text="教學結構\n遊戲結構"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="主題"
+            android:textSize="40dp"
+            android:textColor="#FC5608"
+            android:gravity="center"></TextView>
+
+            <Button
+                android:id="@+id/dierzhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="I\n建立遊戲視窗"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:gravity="center" />
+
+
+        <Button
+            android:id="@+id/disanzhang"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/anjian"
+            android:gravity="center"
+            android:text="II\n設定遊戲初始化\nfor迴圈"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+                android:id="@+id/disizhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="III\n操控貪吃蛇\nif判斷式"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/diwuzhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="IV\n判定是否吃到食物\n生產食物"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/diliuzhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="V\n判定遊戲結束"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="延伸"
+            android:textSize="40dp"
+            android:textColor="#FC5608"
+            android:gravity="center"></TextView>
+
+            <Button
+                android:id="@+id/diqizhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="定義相關函式\n函式Function"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/qibazhang"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/anjian"
+                android:text="總結\n延伸題目"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
